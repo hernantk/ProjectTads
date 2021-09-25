@@ -1,15 +1,10 @@
 import { serviceApi } from "../config/ServiceApi"
 
 const getCountry = async() =>{
-    let response = await serviceApi.get("countries",{
-    params:{
-        country:"br"
-    }})
+    let response = await serviceApi.get("countries")
 
     
-    let result = response
-
-    return result
+    return response.data.response
 }
 
 export const countryService = {getCountry: getCountry}
