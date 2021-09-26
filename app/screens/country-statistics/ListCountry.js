@@ -2,13 +2,11 @@
 import React, { useCallback, useEffect } from "react"
 import { SafeAreaView } from "react-native-safe-area-context"
 import {Card, FlatList, Text} from "native-base"
-import { countryService } from "../../service/country/CountryService"
+import { countryService } from "../../service/CountryService"
 import { useState } from "react"
 import { Pressable } from "react-native"
 import { useNavigation } from "@react-navigation/core"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { ROUTE_COUNTRY_STATISTICS } from "../../navigation/AppRoutes"
-import Statistics from "../statistics/Statistics"
+import { ROUTE_STATS_COUNTRY } from "../../navigation/AppRoutes"
 
 const ListCountry = () =>{
     const navigation = useNavigation()
@@ -24,17 +22,18 @@ const ListCountry = () =>{
         load()
     },[])
 
-    const openStatistics = useCallback((item) => {
-        navigation.navigate(ROUTE_COUNTRY_STATISTICS, item)
-    }, [])
+    const openStatistics = (item) => {
+        navigation.navigate(ROUTE_STATS_COUNTRY, item)
+    }
 
-    const itemKeyExtractor = useCallback((item) => item, [])
+    
 
     const renderPostItem = useCallback( ({item}) => 
-        <Pressable onPress={openStatistics}>
+        <Pressable onPress={()=>openStatistics(item)}>
         <Card>{item}</Card>
         </Pressable>
     , [])
+    const itemKeyExtractor = useCallback((item) => item, [])
 
     return(
         <SafeAreaView>

@@ -1,4 +1,4 @@
-import { serviceApi } from "../config/ServiceApi"
+import { serviceApi } from "./config/ServiceApi"
 
 const getCountry = async() =>{
     let response = await serviceApi.get("countries")

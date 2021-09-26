@@ -1,12 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { MaterialCommunityIcons } from "react-native-vector-icons/MaterialIcons";
 import React from "react";
-import { ROUTE_BRAZIL, ROUTE_COUNTRY, ROUTE_COUNTRY_STATISTICS, ROUTE_STACK, } from "./AppRoutes";
+import { ROUTE_BRAZIL, ROUTE_STACK, } from "./AppRoutes";
 import HistoryBrazil from "../screens/history/HistoryBrazil";
-import ListCountry from "../screens/country/ListCountry";
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Statistics from "../screens/statistics/Statistics";
 import StackScreen from "./StackScreen";
 
 
