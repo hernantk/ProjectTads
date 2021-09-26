@@ -1,9 +1,8 @@
-
 import React, { useEffect } from "react"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { historyService } from "../../service/history/HistoryService"
 import { useState } from "react"
-import HistoryBrazilItem from "./HistoryBrazilItem"
+import HistoryItem from "./HistoryItem"
 
 const HistoryBrazil = () =>{
     const [history,setHistory] = useState([])
@@ -22,7 +21,7 @@ const HistoryBrazil = () =>{
 
     return(
         <SafeAreaView>
-           {history.cases!=null && <HistoryBrazilItem item={history}/>}
+           {history.cases!=null && <HistoryItem item={history}/>}
         </SafeAreaView>
     )
 }
