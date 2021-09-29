@@ -11,16 +11,16 @@ import StatsCountry from "../screens/country-statistics/StatsCountry";
 
 const Stack = createNativeStackNavigator()
 
-const StackScreen = () =>{
+const StackNavigation = () =>{
 
     return(
             <Stack.Navigator> 
                 <Stack.Screen name={ROUTE_LIST_COUNTRY} component={ListCountry} />
-                <Stack.Screen name={ROUTE_STATS_COUNTRY} component={StatsCountry} />
+                <Stack.Screen name={ROUTE_STATS_COUNTRY} component={StatsCountry} options={{title:"Estatisticas"}} />
             </Stack.Navigator>
 
     )
 
 }
 
-export default StackScreen
+export default StackNavigation

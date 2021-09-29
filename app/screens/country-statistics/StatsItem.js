@@ -14,8 +14,8 @@ const StatsItem = ({item}) => {
                 </Card>
                 <Card>
                     <Heading>Mortes</Heading>
-                    <Text>Novos: {item.death.new}</Text>
-                    <Text>Total: {item.death.total}</Text>
+                    <Text>Novos: {item.deaths.new}</Text>
+                    <Text>Total: {item.deaths.total}</Text>
                 </Card> 
 
                 <Card>

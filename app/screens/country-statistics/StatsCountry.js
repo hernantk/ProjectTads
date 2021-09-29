@@ -22,7 +22,7 @@ const StatsCountry = () =>{
 
     return(
         <SafeAreaView>
-           {stats!=null && <StatsItem item={stats}/>}
+           {stats.cases!=null && <StatsItem item={stats}/>}
         </SafeAreaView>
     )
 }
