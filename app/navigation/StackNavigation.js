@@ -15,7 +15,7 @@ const StackNavigation = () =>{
 
     return(
             <Stack.Navigator> 
-                <Stack.Screen name={ROUTE_LIST_COUNTRY} component={ListCountry} />
+                <Stack.Screen name={ROUTE_LIST_COUNTRY} component={ListCountry} options={{title:"Lista de Paises"}}/>
                 <Stack.Screen name={ROUTE_STATS_COUNTRY} component={StatsCountry} options={{title:"Estatisticas"}} />
             </Stack.Navigator>
 
