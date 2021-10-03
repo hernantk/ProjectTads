@@ -15,7 +15,7 @@ const AppNavigation = () =>{
         <NavigationContainer>
             <Tab.Navigator>
                 <Tab.Screen name={ROUTE_BRAZIL} component={HistoryBrazil} options={ {title:"Histórico Brasil"}}/>
-                <Tab.Screen name={ROUTE_STACK} component={StackNavigation} options={{title:"Lista de Paises",headerShown:false}}>
+                <Tab.Screen name={ROUTE_STACK} component={StackNavigation} options={{headerShown:false}}>
                 </Tab.Screen>
             </Tab.Navigator>
         </NavigationContainer>
