@@ -13,13 +13,11 @@ const StatsItem = ({item}) => {
                 <Card style={styles.cardCnt} backgroundColor="yellow.200" rounded={20}>
                     <Heading>Casos</Heading>
                     <Text>Ativos: {item.cases.active}</Text>
-                    <Text bold>Novos: {item.cases.new}</Text>
                     <Text>Total: {item.cases.total}</Text>
                 </Card> 
 
                 <Card style={styles.cardCnt} rounded={20} backgroundColor="red.100">
                     <Heading>Mortes</Heading>
-                    <Text bold>Novos: {item.deaths.new}</Text>
                     <Text>Total: {item.deaths.total}</Text>
                 </Card> 
 
