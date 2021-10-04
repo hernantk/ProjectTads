@@ -1,41 +1,29 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { ROUTE_BRAZIL, ROUTE_STACK, } from "./AppRoutes";
-import HistoryBrazil from "../screens/history/HistoryBrazil";
-import StackNavigation from "./StackNavigation";
-import { Icon, Image } from "native-base";
-import { Ionicons } from "@expo/vector-icons";
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import ListCountry from "../screens/country-statistics/ListCountry"
+import { ROUTE_LIST_COUNTRY, ROUTE_TAB, ROUTE_STATS_COUNTRY } from "./AppRoutes"
+import StatsCountry from "../screens/country-statistics/StatsCountry";
+import TabNavigation from "./TabNavigation";
+import { NavigationContainer } from "@react-navigation/native";
 
 
-const Tab = createBottomTabNavigator()
 
+
+
+
+const Stack = createNativeStackNavigator()
 
 const AppNavigation = () =>{
 
-    return(
-        <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name={ROUTE_BRAZIL} component={HistoryBrazil} 
-                options={
-                        {
-                            title: 'Histórico Brasil',
-                            tabBarIcon: ( { color, size }) => <Icon color={color} size={size} />
-                        }
-                    } />
-                <Tab.Screen name={ROUTE_STACK} component={StackNavigation} 
-                options={
-                    {
-                        headerShown:false,
-                        tabBarShowLabel:false,
-                        tabBarIcon: ( { color, size }) => <Icon name="bars" color={color} size={size} />
-                    }
-                } />
-            </Tab.Navigator>
-        </NavigationContainer>
+    return(<NavigationContainer>
+                <Stack.Navigator> 
+                    <Stack.Screen name={ROUTE_TAB} component={TabNavigation} options={{headerShown:false}}/>
+                    <Stack.Screen name={ROUTE_STATS_COUNTRY} component={StatsCountry} options={{title:"Estatisticas"}} />
+                </Stack.Navigator>
+            </NavigationContainer>
+
     )
 
 }
-
 
 export default AppNavigation

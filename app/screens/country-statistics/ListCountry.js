@@ -30,7 +30,7 @@ const ListCountry = () =>{
 
     const renderPostItem = useCallback( ({item}) => 
         <Pressable onPress={()=>openStatistics(item)}>
-        <Card style={styles.cardCnt} rounded={40}>{item}</Card>
+        <Card marginBottom={2} style={styles.cardCnt} rounded={40}>{item}</Card>
         </Pressable>
     , [])
     const itemKeyExtractor = useCallback((item) => item, [])
@@ -38,7 +38,7 @@ const ListCountry = () =>{
     return(
         <SafeAreaView>
                 
-                <FlatList 
+                <FlatList
                 data={listCountries}
                 renderItem={renderPostItem}
                 keyExtractor={itemKeyExtractor}/>
@@ -49,7 +49,7 @@ const ListCountry = () =>{
 const styles = {
     cardCnt: {
          borderWidth: 2, 
- 
+         
          shadowColor: 'rgba(0,0,0, 0.0)', 
          shadowOffset: { height: 0, width: 0 },
          shadowOpacity: 0,
